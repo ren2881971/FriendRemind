@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25303A741B5B38C30069B6BE /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25303A731B5B38C30069B6BE /* FriendCell.xib */; };
+		25303A771B5B38E10069B6BE /* FriendCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25303A761B5B38E10069B6BE /* FriendCellTableViewCell.m */; };
+		25303A7C1B5B3C2E0069B6BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25303A7A1B5B3C2E0069B6BE /* Model.xcdatamodeld */; };
+		25303A7E1B5B3D210069B6BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25303A7D1B5B3D210069B6BE /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		25303A811B5B44580069B6BE /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 25303A801B5B44580069B6BE /* Friend.m */; };
+		25303A841B5B4BD90069B6BE /* FriendStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 25303A831B5B4BD90069B6BE /* FriendStore.m */; };
+		25303ABD1B5BB0990069B6BE /* FriendInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25303ABB1B5BB0990069B6BE /* FriendInfoViewController.m */; };
+		25303ABE1B5BB0990069B6BE /* FriendInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25303ABC1B5BB0990069B6BE /* FriendInfoViewController.xib */; };
+		253D57D41B4D83180074F3EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57D31B4D83180074F3EC /* main.m */; };
+		253D57D71B4D83180074F3EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57D61B4D83180074F3EC /* AppDelegate.m */; };
+		253D57DA1B4D83180074F3EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57D91B4D83180074F3EC /* ViewController.m */; };
+		253D57DD1B4D83180074F3EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253D57DB1B4D83180074F3EC /* Main.storyboard */; };
+		253D57DF1B4D83180074F3EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253D57DE1B4D83180074F3EC /* Images.xcassets */; };
+		253D57E21B4D83180074F3EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253D57E01B4D83180074F3EC /* LaunchScreen.xib */; };
+		253D57EE1B4D83180074F3EC /* FriendRemindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57ED1B4D83180074F3EC /* FriendRemindTests.m */; };
+		253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		253D57E81B4D83180074F3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 253D57C61B4D83180074F3EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 253D57CD1B4D83180074F3EC;
+			remoteInfo = FriendRemind;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25303A731B5B38C30069B6BE /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		25303A751B5B38E10069B6BE /* FriendCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCellTableViewCell.h; sourceTree = "<group>"; };
+		25303A761B5B38E10069B6BE /* FriendCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCellTableViewCell.m; sourceTree = "<group>"; };
+		25303A7B1B5B3C2E0069B6BE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		25303A7D1B5B3D210069B6BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		25303A7F1B5B44580069B6BE /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = FriendRemind/Friend.h; sourceTree = "<group>"; };
+		25303A801B5B44580069B6BE /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = FriendRemind/Friend.m; sourceTree = "<group>"; };
+		25303A821B5B4BD90069B6BE /* FriendStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendStore.h; sourceTree = "<group>"; };
+		25303A831B5B4BD90069B6BE /* FriendStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendStore.m; sourceTree = "<group>"; };
+		25303ABA1B5BB0990069B6BE /* FriendInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendInfoViewController.h; sourceTree = "<group>"; };
+		25303ABB1B5BB0990069B6BE /* FriendInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendInfoViewController.m; sourceTree = "<group>"; };
+		25303ABC1B5BB0990069B6BE /* FriendInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendInfoViewController.xib; sourceTree = "<group>"; };
+		253D57CE1B4D83180074F3EC /* FriendRemind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendRemind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		253D57D21B4D83180074F3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253D57D31B4D83180074F3EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		253D57D51B4D83180074F3EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		253D57D61B4D83180074F3EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		253D57D81B4D83180074F3EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		253D57D91B4D83180074F3EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		253D57DC1B4D83180074F3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		253D57DE1B4D83180074F3EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		253D57E11B4D83180074F3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		253D57E71B4D83180074F3EC /* FriendRemindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendRemindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		253D57EC1B4D83180074F3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253D57ED1B4D83180074F3EC /* FriendRemindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendRemindTests.m; sourceTree = "<group>"; };
+		253D57F71B4D832C0074F3EC /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
+		253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		253D57CB1B4D83180074F3EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253D57E41B4D83180074F3EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25303A7E1B5B3D210069B6BE /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25303A781B5B3B960069B6BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				25303A7F1B5B44580069B6BE /* Friend.h */,
+				25303A801B5B44580069B6BE /* Friend.m */,
+				25303A7A1B5B3C2E0069B6BE /* Model.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		25303A791B5B3BA00069B6BE /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				25303A821B5B4BD90069B6BE /* FriendStore.h */,
+				25303A831B5B4BD90069B6BE /* FriendStore.m */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		253D57C51B4D83180074F3EC = {
+			isa = PBXGroup;
+			children = (
+				25303A7D1B5B3D210069B6BE /* CoreData.framework */,
+				25303A791B5B3BA00069B6BE /* Store */,
+				25303A781B5B3B960069B6BE /* Model */,
+				253D57D01B4D83180074F3EC /* FriendRemind */,
+				253D57EA1B4D83180074F3EC /* FriendRemindTests */,
+				253D57CF1B4D83180074F3EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		253D57CF1B4D83180074F3EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				253D57CE1B4D83180074F3EC /* FriendRemind.app */,
+				253D57E71B4D83180074F3EC /* FriendRemindTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		253D57D01B4D83180074F3EC /* FriendRemind */ = {
+			isa = PBXGroup;
+			children = (
+				253D57F71B4D832C0074F3EC /* FriendListTableViewController.h */,
+				253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */,
+				25303A731B5B38C30069B6BE /* FriendCell.xib */,
+				25303A751B5B38E10069B6BE /* FriendCellTableViewCell.h */,
+				25303A761B5B38E10069B6BE /* FriendCellTableViewCell.m */,
+				253D57D51B4D83180074F3EC /* AppDelegate.h */,
+				253D57D61B4D83180074F3EC /* AppDelegate.m */,
+				253D57D81B4D83180074F3EC /* ViewController.h */,
+				253D57D91B4D83180074F3EC /* ViewController.m */,
+				253D57DB1B4D83180074F3EC /* Main.storyboard */,
+				253D57DE1B4D83180074F3EC /* Images.xcassets */,
+				253D57E01B4D83180074F3EC /* LaunchScreen.xib */,
+				253D57D11B4D83180074F3EC /* Supporting Files */,
+				25303ABA1B5BB0990069B6BE /* FriendInfoViewController.h */,
+				25303ABB1B5BB0990069B6BE /* FriendInfoViewController.m */,
+				25303ABC1B5BB0990069B6BE /* FriendInfoViewController.xib */,
+			);
+			path = FriendRemind;
+			sourceTree = "<group>";
+		};
+		253D57D11B4D83180074F3EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				253D57D21B4D83180074F3EC /* Info.plist */,
+				253D57D31B4D83180074F3EC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		253D57EA1B4D83180074F3EC /* FriendRemindTests */ = {
+			isa = PBXGroup;
+			children = (
+				253D57ED1B4D83180074F3EC /* FriendRemindTests.m */,
+				253D57EB1B4D83180074F3EC /* Supporting Files */,
+			);
+			path = FriendRemindTests;
+			sourceTree = "<group>";
+		};
+		253D57EB1B4D83180074F3EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				253D57EC1B4D83180074F3EC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		253D57CD1B4D83180074F3EC /* FriendRemind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 253D57F11B4D83180074F3EC /* Build configuration list for PBXNativeTarget "FriendRemind" */;
+			buildPhases = (
+				253D57CA1B4D83180074F3EC /* Sources */,
+				253D57CB1B4D83180074F3EC /* Frameworks */,
+				253D57CC1B4D83180074F3EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FriendRemind;
+			productName = FriendRemind;
+			productReference = 253D57CE1B4D83180074F3EC /* FriendRemind.app */;
+			productType = "com.apple.product-type.application";
+		};
+		253D57E61B4D83180074F3EC /* FriendRemindTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 253D57F41B4D83180074F3EC /* Build configuration list for PBXNativeTarget "FriendRemindTests" */;
+			buildPhases = (
+				253D57E31B4D83180074F3EC /* Sources */,
+				253D57E41B4D83180074F3EC /* Frameworks */,
+				253D57E51B4D83180074F3EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				253D57E91B4D83180074F3EC /* PBXTargetDependency */,
+			);
+			name = FriendRemindTests;
+			productName = FriendRemindTests;
+			productReference = 253D57E71B4D83180074F3EC /* FriendRemindTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		253D57C61B4D83180074F3EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = frank;
+				TargetAttributes = {
+					253D57CD1B4D83180074F3EC = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					253D57E61B4D83180074F3EC = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 253D57CD1B4D83180074F3EC;
+					};
+				};
+			};
+			buildConfigurationList = 253D57C91B4D83180074F3EC /* Build configuration list for PBXProject "FriendRemind" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 253D57C51B4D83180074F3EC;
+			productRefGroup = 253D57CF1B4D83180074F3EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				253D57CD1B4D83180074F3EC /* FriendRemind */,
+				253D57E61B4D83180074F3EC /* FriendRemindTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		253D57CC1B4D83180074F3EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253D57DD1B4D83180074F3EC /* Main.storyboard in Resources */,
+				25303ABE1B5BB0990069B6BE /* FriendInfoViewController.xib in Resources */,
+				253D57E21B4D83180074F3EC /* LaunchScreen.xib in Resources */,
+				253D57DF1B4D83180074F3EC /* Images.xcassets in Resources */,
+				25303A741B5B38C30069B6BE /* FriendCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253D57E51B4D83180074F3EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		253D57CA1B4D83180074F3EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25303ABD1B5BB0990069B6BE /* FriendInfoViewController.m in Sources */,
+				253D57DA1B4D83180074F3EC /* ViewController.m in Sources */,
+				25303A811B5B44580069B6BE /* Friend.m in Sources */,
+				253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */,
+				253D57D71B4D83180074F3EC /* AppDelegate.m in Sources */,
+				253D57D41B4D83180074F3EC /* main.m in Sources */,
+				25303A841B5B4BD90069B6BE /* FriendStore.m in Sources */,
+				25303A771B5B38E10069B6BE /* FriendCellTableViewCell.m in Sources */,
+				25303A7C1B5B3C2E0069B6BE /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253D57E31B4D83180074F3EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253D57EE1B4D83180074F3EC /* FriendRemindTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		253D57E91B4D83180074F3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 253D57CD1B4D83180074F3EC /* FriendRemind */;
+			targetProxy = 253D57E81B4D83180074F3EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		253D57DB1B4D83180074F3EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				253D57DC1B4D83180074F3EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		253D57E01B4D83180074F3EC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				253D57E11B4D83180074F3EC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		253D57EF1B4D83180074F3EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (MCDSJY34TT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		253D57F01B4D83180074F3EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (MCDSJY34TT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		253D57F21B4D83180074F3EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FriendRemind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		253D57F31B4D83180074F3EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FriendRemind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		253D57F51B4D83180074F3EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FriendRemindTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendRemind.app/FriendRemind";
+			};
+			name = Debug;
+		};
+		253D57F61B4D83180074F3EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FriendRemindTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendRemind.app/FriendRemind";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		253D57C91B4D83180074F3EC /* Build configuration list for PBXProject "FriendRemind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				253D57EF1B4D83180074F3EC /* Debug */,
+				253D57F01B4D83180074F3EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		253D57F11B4D83180074F3EC /* Build configuration list for PBXNativeTarget "FriendRemind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				253D57F21B4D83180074F3EC /* Debug */,
+				253D57F31B4D83180074F3EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		253D57F41B4D83180074F3EC /* Build configuration list for PBXNativeTarget "FriendRemindTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				253D57F51B4D83180074F3EC /* Debug */,
+				253D57F61B4D83180074F3EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		25303A7A1B5B3C2E0069B6BE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				25303A7B1B5B3C2E0069B6BE /* Model.xcdatamodel */,
+			);
+			currentVersion = 25303A7B1B5B3C2E0069B6BE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 253D57C61B4D83180074F3EC /* Project object */;
+}

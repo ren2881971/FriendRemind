@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendInfoViewController">
+            <connections>
+                <outlet property="birthDayText" destination="wgO-ey-0Ie" id="kbl-Gh-Z0h"/>
+                <outlet property="cancelButton" destination="s3f-ad-TQ5" id="kHD-3f-MNy"/>
+                <outlet property="confrimButton" destination="6Ih-fb-f6p" id="s3K-J9-ocb"/>
+                <outlet property="datePicker" destination="XGM-Zo-XUk" id="VTL-c0-WnP"/>
+                <outlet property="nameText" destination="VAY-AS-BpT" id="o8H-XF-FSp"/>
+                <outlet property="toolBar" destination="xjy-Wj-tmk" id="N4b-os-dPf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAY-AS-BpT">
+                    <rect key="frame" x="164" y="106" width="318" height="31"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="140" y="106" width="421" height="31"/>
+                    </variation>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日日期:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC9-Ot-sQw">
+                    <rect key="frame" x="70" y="197" width="73" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="41" y="197" width="73" height="21"/>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wgO-ey-0Ie">
+                    <rect key="frame" x="164" y="194" width="318" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="140" y="194" width="421" height="30"/>
+                    </variation>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-ZX-fzz">
+                    <rect key="frame" x="70" y="110" width="51" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="41" y="110" width="51" height="21"/>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cC9-Ot-sQw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="0bi-8e-eJL"/>
+                <constraint firstItem="wgO-ey-0Ie" firstAttribute="baseline" secondItem="cC9-Ot-sQw" secondAttribute="baseline" id="OmH-CF-paL"/>
+                <constraint firstItem="cC9-Ot-sQw" firstAttribute="top" secondItem="KfW-ZX-fzz" secondAttribute="bottom" constant="66" id="Rgc-3w-aMc"/>
+                <constraint firstItem="wgO-ey-0Ie" firstAttribute="top" secondItem="VAY-AS-BpT" secondAttribute="bottom" constant="57" id="Sjk-ao-elv"/>
+                <constraint firstItem="KfW-ZX-fzz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="70" id="Sre-2m-igC">
+                    <variation key="widthClass=compact" constant="41"/>
+                </constraint>
+                <constraint firstItem="cC9-Ot-sQw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="41" id="Ts9-Yw-Td6"/>
+                <constraint firstAttribute="trailing" secondItem="wgO-ey-0Ie" secondAttribute="trailing" constant="118" id="W7r-8Z-UfP">
+                    <variation key="widthClass=compact" constant="39"/>
+                </constraint>
+                <constraint firstItem="VAY-AS-BpT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="106" id="ZIx-L1-PJz"/>
+                <constraint firstItem="KfW-ZX-fzz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="fvb-PG-IkH"/>
+                <constraint firstItem="VAY-AS-BpT" firstAttribute="baseline" secondItem="KfW-ZX-fzz" secondAttribute="baseline" constant="-1" id="k71-eJ-y1w">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="wgO-ey-0Ie" firstAttribute="baseline" secondItem="cC9-Ot-sQw" secondAttribute="baseline" id="ktj-Ut-9KG"/>
+                <constraint firstItem="KfW-ZX-fzz" firstAttribute="top" secondItem="cC9-Ot-sQw" secondAttribute="top" constant="-87" id="nf1-iM-unh"/>
+                <constraint firstItem="VAY-AS-BpT" firstAttribute="leading" secondItem="KfW-ZX-fzz" secondAttribute="trailing" constant="43" id="num-Fl-lLe">
+                    <variation key="widthClass=compact" constant="48"/>
+                </constraint>
+                <constraint firstItem="wgO-ey-0Ie" firstAttribute="leading" secondItem="cC9-Ot-sQw" secondAttribute="trailing" constant="26" id="pdZ-l9-Pmc"/>
+                <constraint firstItem="KfW-ZX-fzz" firstAttribute="leading" secondItem="cC9-Ot-sQw" secondAttribute="leading" id="q0a-jc-R3d"/>
+                <constraint firstAttribute="trailing" secondItem="VAY-AS-BpT" secondAttribute="trailing" constant="118" id="rFl-oE-sQo">
+                    <variation key="widthClass=compact" constant="39"/>
+                </constraint>
+                <constraint firstItem="wgO-ey-0Ie" firstAttribute="leading" secondItem="cC9-Ot-sQw" secondAttribute="trailing" constant="26" id="tJe-G3-xqu"/>
+                <constraint firstItem="VAY-AS-BpT" firstAttribute="leading" secondItem="KfW-ZX-fzz" secondAttribute="trailing" constant="43" id="vWo-rG-GcX">
+                    <variation key="widthClass=compact" constant="48"/>
+                </constraint>
+                <constraint firstItem="wgO-ey-0Ie" firstAttribute="leading" secondItem="cC9-Ot-sQw" secondAttribute="trailing" constant="21" id="veh-7h-APy"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Rgc-3w-aMc"/>
+                    <exclude reference="Ts9-Yw-Td6"/>
+                    <exclude reference="ktj-Ut-9KG"/>
+                    <exclude reference="pdZ-l9-Pmc"/>
+                    <exclude reference="tJe-G3-xqu"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="nf1-iM-unh"/>
+                    <exclude reference="q0a-jc-R3d"/>
+                    <exclude reference="0bi-8e-eJL"/>
+                    <include reference="Rgc-3w-aMc"/>
+                    <include reference="Ts9-Yw-Td6"/>
+                    <exclude reference="OmH-CF-paL"/>
+                    <include reference="ktj-Ut-9KG"/>
+                    <include reference="pdZ-l9-Pmc"/>
+                    <include reference="tJe-G3-xqu"/>
+                    <exclude reference="veh-7h-APy"/>
+                </mask>
+            </variation>
+        </view>
+        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="XGM-Zo-XUk">
+            <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <date key="date" timeIntervalSinceReferenceDate="459006198.70738202">
+                <!--2015-07-19 13:43:18 +0000-->
+            </date>
+            <point key="canvasLocation" x="58" y="839"/>
+        </datePicker>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xjy-Wj-tmk">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem title="确定" id="6Ih-fb-f6p">
+                    <connections>
+                        <action selector="confirmDate:" destination="-1" id="Zbo-jT-Kt4"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem title="取消" id="s3f-ad-TQ5">
+                    <connections>
+                        <action selector="cancelDate:" destination="-1" id="G8i-bY-Swq"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+            <point key="canvasLocation" x="439" y="787"/>
+        </toolbar>
+    </objects>
+</document>
