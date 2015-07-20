@@ -11,10 +11,11 @@
 #import "FriendStore.h"
 #import "FriendCellTableViewCell.h"
 #import "Friend.h"
+#import "NSDateComponents+FRDateComponents.h"
 @import CoreData;
 @interface FriendListTableViewController ()
 @property(nonatomic,strong) NSMutableArray *friendList;
-@property(nonatomic,weak) NSManagedObjectContext *context;
+@property(nonatomic,weak) NSManagedObjectContext *context;/**< 上下文*/
 @end
 
 @implementation FriendListTableViewController
@@ -33,6 +34,7 @@
         navItem.rightBarButtonItem = self.editButtonItem;
         FriendStore *store = [FriendStore sharedStore];
         self.context = store.managedObjectContext;
+        
     }
     return self;
 }
@@ -71,6 +73,9 @@
     Friend *friend = self.friendList[indexPath.row];
     cell.nameLabel.text = friend.name;
     cell.birthdayLabel.text = friend.birthday;
+    NSString *birthDay = friend.birthday;
+    NSDate *now = [NSDate date];
+    NSLog(@"%@",[self howlongFromDate:birthDay]);
     return cell;
 }
 
@@ -96,6 +101,52 @@
         [NSException raise:@"加载列表信息错误" format:@"%@",[error localizedDescription]];
     }
     
+}
+
+- (NSString *) howlongFromDate:(NSString *)fromDate
+{
+    //处理fromDate
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    //中国东八时区
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
+    
+    NSDate *fromDateObj = [dateFormatter dateFromString:fromDate];
+    //处理当前时间
+    NSDate *date = [NSDate date];
+    
+    NSDate *localeDate = [dateFormatter dateFromString:[dateFormatter stringFromDate:date]];
+    
+    NSDateComponents *fromDateCom = [self getDateComponents:fromDateObj];
+    
+    NSDateComponents *localDateCom = [self getDateComponents:localeDate];
+
+    //比较 NSDateComponents 的 月 和 日 大小。
+    
+    BOOL big = [NSDateComponents compare:fromDateCom big:localDateCom];
+    
+    if (big) {
+       
+    }else{
+        
+    }
+     return @"";
+    
+}
+
+-(NSDateComponents *) getDateComponents:(NSDate *) date
+{
+    
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    calendar.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:8];
+    
+    NSDateComponents *calComponts = [calendar components:unitFlags fromDate:date];
+    
+    return calComponts;
 }
 
 /*

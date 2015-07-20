@@ -23,6 +23,7 @@
 		253D57E21B4D83180074F3EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253D57E01B4D83180074F3EC /* LaunchScreen.xib */; };
 		253D57EE1B4D83180074F3EC /* FriendRemindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57ED1B4D83180074F3EC /* FriendRemindTests.m */; };
 		253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */; };
+		25ADC9F11B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		253D57ED1B4D83180074F3EC /* FriendRemindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendRemindTests.m; sourceTree = "<group>"; };
 		253D57F71B4D832C0074F3EC /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
 		253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
+		25ADC9EF1B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+FRDateComponents.h"; sourceTree = "<group>"; };
+		25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+FRDateComponents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 		253D57C51B4D83180074F3EC = {
 			isa = PBXGroup;
 			children = (
+				25ADC9EE1B5D4E0D00CBCD52 /* Util */,
 				25303A7D1B5B3D210069B6BE /* CoreData.framework */,
 				25303A791B5B3BA00069B6BE /* Store */,
 				25303A781B5B3B960069B6BE /* Model */,
@@ -171,6 +175,15 @@
 				253D57EC1B4D83180074F3EC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25ADC9EE1B5D4E0D00CBCD52 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				25ADC9EF1B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.h */,
+				25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +291,7 @@
 				25303ABD1B5BB0990069B6BE /* FriendInfoViewController.m in Sources */,
 				253D57DA1B4D83180074F3EC /* ViewController.m in Sources */,
 				25303A811B5B44580069B6BE /* Friend.m in Sources */,
+				25ADC9F11B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m in Sources */,
 				253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */,
 				253D57D71B4D83180074F3EC /* AppDelegate.m in Sources */,
 				253D57D41B4D83180074F3EC /* main.m in Sources */,
