@@ -131,7 +131,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
             <items>
-                <barButtonItem title="确定" id="6Ih-fb-f6p">
+                <barButtonItem title="确定" id="6Ih-fb-f6p" propertyAccessControl="none">
                     <connections>
                         <action selector="confirmDate:" destination="-1" id="Zbo-jT-Kt4"/>
                     </connections>

@@ -8,8 +8,13 @@
 
 #import "FriendListTableViewController.h"
 #import "FriendInfoViewController.h"
+#import "FriendStore.h"
+#import "FriendCellTableViewCell.h"
+#import "Friend.h"
+@import CoreData;
 @interface FriendListTableViewController ()
-
+@property(nonatomic,strong) NSMutableArray *friendList;
+@property(nonatomic,weak) NSManagedObjectContext *context;
 @end
 
 @implementation FriendListTableViewController
@@ -26,6 +31,8 @@
         UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNew:)];
         navItem.leftBarButtonItem =addItem;
         navItem.rightBarButtonItem = self.editButtonItem;
+        FriendStore *store = [FriendStore sharedStore];
+        self.context = store.managedObjectContext;
     }
     return self;
 }
@@ -36,21 +43,34 @@
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"FriendCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"FirendCell"];
+    // 加载列表信息
+    [self loadAllFriend];
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self loadAllFriend];
+    //刷新tableview reloadData 需要主程执行。
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
 #pragma mark - Table view data source
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.friendList count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableCell" forIndexPath:indexPath];
-    
+    FriendCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FirendCell" forIndexPath:indexPath];
+    Friend *friend = self.friendList[indexPath.row];
+    cell.nameLabel.text = friend.name;
+    cell.birthdayLabel.text = friend.birthday;
     return cell;
 }
 
@@ -62,6 +82,22 @@
     [self.navigationController pushViewController:infoView animated:YES];
     
 }
+
+- (void) loadAllFriend
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    request.entity = [NSEntityDescription entityForName:@"Friend" inManagedObjectContext:self.context];
+    
+    NSError *error = nil;
+    
+    self.friendList = [[self.context executeFetchRequest:request error:&error] mutableCopy];
+    if (error) {
+        [NSException raise:@"加载列表信息错误" format:@"%@",[error localizedDescription]];
+    }
+    
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -32,8 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [self.toolBar setItems:@[self.confrimButton,self.cancelButton] animated:YES];
+     UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    [self.toolBar setItems:@[flexSpace,self.confrimButton,flexSpace,self.cancelButton,flexSpace] animated:YES];
     
     self.datePicker.datePickerMode = UIDatePickerModeDate;
     
@@ -66,7 +66,18 @@
 
 -(void) saveFriend:(id)sender
 {
-    NSLog(@"%@,%@",self.nameText.text,self.birthDayText.text);
+    FriendStore *store = [FriendStore sharedStore];
+    NSManagedObjectContext *context = store.managedObjectContext;
+    NSManagedObject *friend = [NSEntityDescription insertNewObjectForEntityForName:@"Friend" inManagedObjectContext:context];
+    
+    [friend setValue:self.nameText.text forKey:@"name"];
+    [friend setValue:self.birthDayText.text forKey:@"birthday"];
+    NSError *error = nil;
+    if (![context save:&error]) {
+        [NSException raise:@"访问数据库错误" format:@"%@",[error localizedDescription]];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 
@@ -75,7 +86,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)selectDateInpuf:(id)sender {
-    FriendStore *store = [FriendStore sharedStore];
     
 }
 
