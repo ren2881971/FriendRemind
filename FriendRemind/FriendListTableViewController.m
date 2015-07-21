@@ -102,7 +102,7 @@
     }
     
 }
-
+/**< 方法搁浅  先着手开发 iOS 方面的部分。 逻辑部分稍后完成 */
 - (NSString *) howlongFromDate:(NSString *)fromDate
 {
     //处理fromDate
@@ -127,9 +127,21 @@
     BOOL big = [NSDateComponents compare:fromDateCom big:localDateCom];
     
     if (big) {
-       
+       //local - from
+        NSInteger localMon = [localDateCom month];
+        NSInteger fromMon = [fromDateCom month];
+        if (localMon == fromMon) {
+            
+        }else{
+            NSInteger grap = localMon - fromMon;
+            if (grap > 0) {
+                
+            }else{
+                
+            }
+        }
     }else{
-        
+        //all days of year - (from - local)
     }
      return @"";
     
@@ -157,17 +169,35 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        Friend *friend = self.friendList[indexPath.row];
+        
+        FriendStore *store = [FriendStore sharedStore];
+        NSManagedObjectContext *context = store.managedObjectContext;
+        
+        [context deleteObject:friend];
+        //NSManagedObjectContext 的所有  删除 修改 新增操作 都要save 才行。 不然都是临时的。
+        
+        NSError *error = nil;
+        
+        if (![context save:&error]) {
+            NSLog(@"could't delete the data !");
+            abort();
+        }else{
+            [self.friendList removeObjectAtIndex:indexPath.row];
+            
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

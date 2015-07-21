@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>72AA28BF-6979-40A3-96D9-FF1BA284DDB8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>FriendRemind</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4DE57B79DD62FAE2558E40F6BE84DEAC5BB56A62</key>
 		<string>https://github.com/ren2881971/FriendRemind.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FriendRemind.xcodeproj/project.xcworkspace</string>
+	<string>FriendRemind.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4DE57B79DD62FAE2558E40F6BE84DEAC5BB56A62</key>
