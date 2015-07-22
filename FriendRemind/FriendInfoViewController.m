@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *confrimButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UIImageView *friendPic;
 @end
 
 @implementation FriendInfoViewController
@@ -46,6 +47,25 @@
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveFriend:)];
     
     self.navigationItem.rightBarButtonItem = saveButton;
+    
+    //image view handle.
+    if (!self.friendPic.image) {
+        UIImage *image = [UIImage imageNamed:@"one.jpg"];
+        self.friendPic.image = image;
+        self.friendPic.layer.masksToBounds = YES;
+        self.friendPic.layer.cornerRadius = self.friendPic.bounds.size.width * 0.1;
+        
+        self.friendPic.layer.borderWidth = 0.5;
+        
+        self.friendPic.layer.borderColor = [UIColor grayColor].CGColor;
+    }
+    //这个属性 会屏蔽 user event  比如 touch
+    self.friendPic.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changePic:)];
+    singleTap.numberOfTapsRequired = 1;
+    [self.friendPic addGestureRecognizer:singleTap];
+    
 }
 
 
@@ -89,6 +109,11 @@
     
 }
 
+//friendPic touch event
+-(void) changePic:(UITapGestureRecognizer *) sender
+{
+    NSLog(@"pic is touch.");
+}
 /*
 #pragma mark - Navigation
 

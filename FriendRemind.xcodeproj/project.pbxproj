@@ -23,6 +23,9 @@
 		253D57E21B4D83180074F3EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253D57E01B4D83180074F3EC /* LaunchScreen.xib */; };
 		253D57EE1B4D83180074F3EC /* FriendRemindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57ED1B4D83180074F3EC /* FriendRemindTests.m */; };
 		253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */; };
+		259B05F41B5E25FB007F39A7 /* FriendDetialInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B05F21B5E25FB007F39A7 /* FriendDetialInfoViewController.m */; };
+		259B05F51B5E25FB007F39A7 /* FriendDetialInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259B05F31B5E25FB007F39A7 /* FriendDetialInfoViewController.xib */; };
+		259B05F71B5E99DD007F39A7 /* one.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 259B05F61B5E99DD007F39A7 /* one.jpg */; };
 		25ADC9F11B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,10 @@
 		253D57ED1B4D83180074F3EC /* FriendRemindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendRemindTests.m; sourceTree = "<group>"; };
 		253D57F71B4D832C0074F3EC /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
 		253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
+		259B05F11B5E25FB007F39A7 /* FriendDetialInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetialInfoViewController.h; sourceTree = "<group>"; };
+		259B05F21B5E25FB007F39A7 /* FriendDetialInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetialInfoViewController.m; sourceTree = "<group>"; };
+		259B05F31B5E25FB007F39A7 /* FriendDetialInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendDetialInfoViewController.xib; sourceTree = "<group>"; };
+		259B05F61B5E99DD007F39A7 /* one.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = one.jpg; path = ../../../Downloads/one.jpg; sourceTree = "<group>"; };
 		25ADC9EF1B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+FRDateComponents.h"; sourceTree = "<group>"; };
 		25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+FRDateComponents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +154,9 @@
 				25303ABA1B5BB0990069B6BE /* FriendInfoViewController.h */,
 				25303ABB1B5BB0990069B6BE /* FriendInfoViewController.m */,
 				25303ABC1B5BB0990069B6BE /* FriendInfoViewController.xib */,
+				259B05F11B5E25FB007F39A7 /* FriendDetialInfoViewController.h */,
+				259B05F21B5E25FB007F39A7 /* FriendDetialInfoViewController.m */,
+				259B05F31B5E25FB007F39A7 /* FriendDetialInfoViewController.xib */,
 			);
 			path = FriendRemind;
 			sourceTree = "<group>";
@@ -154,6 +164,7 @@
 		253D57D11B4D83180074F3EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				259B05F61B5E99DD007F39A7 /* one.jpg */,
 				253D57D21B4D83180074F3EC /* Info.plist */,
 				253D57D31B4D83180074F3EC /* main.m */,
 			);
@@ -268,9 +279,11 @@
 			files = (
 				253D57DD1B4D83180074F3EC /* Main.storyboard in Resources */,
 				25303ABE1B5BB0990069B6BE /* FriendInfoViewController.xib in Resources */,
+				259B05F71B5E99DD007F39A7 /* one.jpg in Resources */,
 				253D57E21B4D83180074F3EC /* LaunchScreen.xib in Resources */,
 				253D57DF1B4D83180074F3EC /* Images.xcassets in Resources */,
 				25303A741B5B38C30069B6BE /* FriendCell.xib in Resources */,
+				259B05F51B5E25FB007F39A7 /* FriendDetialInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25303ABD1B5BB0990069B6BE /* FriendInfoViewController.m in Sources */,
+				259B05F41B5E25FB007F39A7 /* FriendDetialInfoViewController.m in Sources */,
 				253D57DA1B4D83180074F3EC /* ViewController.m in Sources */,
 				25303A811B5B44580069B6BE /* Friend.m in Sources */,
 				25ADC9F11B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m in Sources */,

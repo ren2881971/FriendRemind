@@ -12,6 +12,7 @@
 #import "FriendCellTableViewCell.h"
 #import "Friend.h"
 #import "NSDateComponents+FRDateComponents.h"
+#import "FriendDetialInfoViewController.h"
 @import CoreData;
 @interface FriendListTableViewController ()
 @property(nonatomic,strong) NSMutableArray *friendList;
@@ -213,21 +214,23 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    
+    FriendDetialInfoViewController *detialInfoViewController = [[FriendDetialInfoViewController alloc] init];
     
     // Pass the selected object to the new view controller.
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    detialInfoViewController.friend = self.friendList[indexPath.row];
+    [self.navigationController pushViewController:detialInfoViewController animated:YES];
 }
-*/
+
 
 /*
 #pragma mark - Navigation
