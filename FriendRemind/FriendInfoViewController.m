@@ -9,7 +9,7 @@
 #import "FriendInfoViewController.h"
 #import "FriendStore.h"
 @import CoreData;
-@interface FriendInfoViewController ()
+@interface FriendInfoViewController ()<UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
 @property (weak,nonatomic) IBOutlet UITextField *birthDayText;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -112,7 +112,15 @@
 //friendPic touch event
 -(void) changePic:(UITapGestureRecognizer *) sender
 {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从相册选取",nil];
+    [sheet showInView:self.view];
     NSLog(@"pic is touch.");
+}
+#pragma mark UIActionSheet delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
 }
 /*
 #pragma mark - Navigation
