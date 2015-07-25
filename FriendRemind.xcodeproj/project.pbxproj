@@ -23,7 +23,6 @@
 		253D57E21B4D83180074F3EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253D57E01B4D83180074F3EC /* LaunchScreen.xib */; };
 		253D57EE1B4D83180074F3EC /* FriendRemindTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57ED1B4D83180074F3EC /* FriendRemindTests.m */; };
 		253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */; };
-		25592CAC1B6145C500102E0F /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25592CAB1B6145C500102E0F /* VPImageCropperViewController.m */; };
 		259B05F41B5E25FB007F39A7 /* FriendDetialInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259B05F21B5E25FB007F39A7 /* FriendDetialInfoViewController.m */; };
 		259B05F51B5E25FB007F39A7 /* FriendDetialInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 259B05F31B5E25FB007F39A7 /* FriendDetialInfoViewController.xib */; };
 		259B05F71B5E99DD007F39A7 /* one.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 259B05F61B5E99DD007F39A7 /* one.jpg */; };
@@ -68,8 +67,6 @@
 		253D57ED1B4D83180074F3EC /* FriendRemindTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendRemindTests.m; sourceTree = "<group>"; };
 		253D57F71B4D832C0074F3EC /* FriendListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListTableViewController.h; sourceTree = "<group>"; };
 		253D57F81B4D832C0074F3EC /* FriendListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListTableViewController.m; sourceTree = "<group>"; };
-		25592CAA1B6145C500102E0F /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
-		25592CAB1B6145C500102E0F /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		259B05F11B5E25FB007F39A7 /* FriendDetialInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendDetialInfoViewController.h; sourceTree = "<group>"; };
 		259B05F21B5E25FB007F39A7 /* FriendDetialInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetialInfoViewController.m; sourceTree = "<group>"; };
 		259B05F31B5E25FB007F39A7 /* FriendDetialInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendDetialInfoViewController.xib; sourceTree = "<group>"; };
@@ -140,7 +137,6 @@
 		253D57D01B4D83180074F3EC /* FriendRemind */ = {
 			isa = PBXGroup;
 			children = (
-				25592CA91B61455700102E0F /* VPImageCropper */,
 				25ADC9EE1B5D4E0D00CBCD52 /* Util */,
 				25303A781B5B3B960069B6BE /* Model */,
 				25303A791B5B3BA00069B6BE /* Store */,
@@ -192,15 +188,6 @@
 				253D57EC1B4D83180074F3EC /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		25592CA91B61455700102E0F /* VPImageCropper */ = {
-			isa = PBXGroup;
-			children = (
-				25592CAA1B6145C500102E0F /* VPImageCropperViewController.h */,
-				25592CAB1B6145C500102E0F /* VPImageCropperViewController.m */,
-			);
-			name = VPImageCropper;
 			sourceTree = "<group>";
 		};
 		25ADC9EE1B5D4E0D00CBCD52 /* Util */ = {
@@ -325,7 +312,6 @@
 				253D57FA1B4D832C0074F3EC /* FriendListTableViewController.m in Sources */,
 				253D57D71B4D83180074F3EC /* AppDelegate.m in Sources */,
 				253D57D41B4D83180074F3EC /* main.m in Sources */,
-				25592CAC1B6145C500102E0F /* VPImageCropperViewController.m in Sources */,
 				25303A841B5B4BD90069B6BE /* FriendStore.m in Sources */,
 				25303A771B5B38E10069B6BE /* FriendCellTableViewCell.m in Sources */,
 				25303A7C1B5B3C2E0069B6BE /* Model.xcdatamodeld in Sources */,

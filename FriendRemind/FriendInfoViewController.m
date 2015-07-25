@@ -4,12 +4,16 @@
 //
 //  Created by renfrank on 15/7/19.
 //  Copyright (c) 2015年 frank. All rights reserved.
+//  添加 friend info page.
 //
 
 #import "FriendInfoViewController.h"
 #import "FriendStore.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 @import CoreData;
-@interface FriendInfoViewController ()<UIActionSheetDelegate>
+
+
+@interface FriendInfoViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
 @property (weak,nonatomic) IBOutlet UITextField *birthDayText;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -92,6 +96,8 @@
     
     [friend setValue:self.nameText.text forKey:@"name"];
     [friend setValue:self.birthDayText.text forKey:@"birthday"];
+    NSData *imgData = UIImagePNGRepresentation(self.friendPic.image);
+    [friend setValue:imgData forKey:@"friendImg"];
     NSError *error = nil;
     if (![context save:&error]) {
         [NSException raise:@"访问数据库错误" format:@"%@",[error localizedDescription]];
@@ -120,7 +126,45 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    
+    if (buttonIndex == 0 ) {
+        // 拍照
+        if ([self isCameraAvailable] && [self doesCameraSupportTakingPhotos]) {
+            UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+            imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            
+            NSMutableArray *mediaTypes = [[NSMutableArray alloc] init];
+            
+            [mediaTypes addObject:(__bridge NSString *) kUTTypeImage];
+            
+            imagePicker.mediaTypes = mediaTypes;
+            
+            imagePicker.delegate = self;
+            
+            [self presentViewController:imagePicker animated:YES completion:^(void){
+                NSLog(@"Picker View Controller is presented");
+                }
+             ];
+        }
+        
+    }else if(buttonIndex == 1){
+        if ([self isPhotoLibraryAvailable]) {
+            UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            
+            NSMutableArray *mediaTypes = [[NSMutableArray alloc] init];
+            
+            [mediaTypes addObject:(__bridge NSString*) kUTTypeImage];
+            
+            imagePicker.mediaTypes = mediaTypes;
+            
+            imagePicker.delegate = self;
+            
+            //模态 显示照相机
+            [self presentViewController:imagePicker animated:YES completion:^(void){
+                NSLog(@"Picker View Controller is presented");
+            }];
+        }
+    }
 }
 /*
 #pragma mark - Navigation
@@ -131,5 +175,79 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma  mark UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *portraitImg = info[@"UIImagePickerControllerOriginalImage"];
+    
+    self.friendPic.image = portraitImg;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:^(){
+    }];
+}
+
+#pragma mark camera utility
+- (BOOL) isCameraAvailable{
+    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+}
+
+-(BOOL) doesCameraSupportTakingPhotos
+{
+    //__bridge  CF CG to iOS
+    return [self cameraSupportsMedia:(__bridge NSString *)kUTTypeImage sourceType:UIImagePickerControllerSourceTypeCamera];
+}
+
+-(BOOL) isPhotoLibraryAvailable{
+    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary];
+}
+
+-(BOOL) cameraSupportsMedia:(NSString *) paramMediaType sourceType: (UIImagePickerControllerSourceType) paramSourceType
+{
+    __block BOOL result = NO;
+    if ([paramMediaType length] == 0) {
+        return NO;
+    }
+    
+    NSArray *availableMediaTypes = [UIImagePickerController availableMediaTypesForSourceType:paramSourceType];
+    [availableMediaTypes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *mediaType = (NSString *)obj;
+        if ([mediaType isEqualToString:paramMediaType]) {
+            result = YES;
+            *stop = YES;
+        }
+    }];
+    return result;
+}
+
+
+#pragma mark - UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

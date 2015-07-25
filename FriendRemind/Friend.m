@@ -14,6 +14,7 @@
 @dynamic name;
 @dynamic birthday;
 @dynamic keyId;
+@dynamic friendImg;
 //when insert to the db,this method will be called.
 -(void) awakeFromInsert
 {

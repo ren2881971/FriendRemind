@@ -74,6 +74,14 @@
     Friend *friend = self.friendList[indexPath.row];
     cell.nameLabel.text = friend.name;
     cell.birthdayLabel.text = friend.birthday;
+    if (friend.friendImg != nil) {
+        UIImage *shortImg = [UIImage imageWithData:friend.friendImg];
+        cell.picImageView.image = shortImg;
+        cell.picImageView.layer.masksToBounds = YES;
+        cell.picImageView.layer.cornerRadius = cell.picImageView.bounds.size.width * 0.3;
+        cell.picImageView.layer.borderWidth = 0.1;
+        cell.picImageView.layer.borderColor = [UIColor grayColor].CGColor;
+    }
     NSString *birthDay = friend.birthday;
     NSDate *now = [NSDate date];
     NSLog(@"%@",[self howlongFromDate:birthDay]);

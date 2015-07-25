@@ -15,5 +15,5 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * birthday;
 @property (nonatomic, retain) NSString * keyId;
-
+@property (nonatomic,retain) NSData *friendImg;
 @end
