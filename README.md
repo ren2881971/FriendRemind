@@ -24,3 +24,4 @@
 
 PS：
 ## 每天被各种问题折磨，痛并快乐着！ (http://stackoverflow.com/) 每天访问次数最多的网站！ 
+License：LGPL 
