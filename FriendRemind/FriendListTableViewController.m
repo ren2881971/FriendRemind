@@ -29,7 +29,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         UINavigationItem *navItem = self.navigationItem;
-        navItem.title = @"友情列表";
+        navItem.title = @"生日信息";
         UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNew:)];
         navItem.leftBarButtonItem =addItem;
         navItem.rightBarButtonItem = self.editButtonItem;
