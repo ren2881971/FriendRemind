@@ -96,8 +96,14 @@
     
     [friend setValue:self.nameText.text forKey:@"name"];
     [friend setValue:self.birthDayText.text forKey:@"birthday"];
-    NSData *imgData = UIImagePNGRepresentation(self.friendPic.image);
-    [friend setValue:imgData forKey:@"friendImg"];
+    if (self.friendPic.image != nil) {
+        NSData *imgData = UIImagePNGRepresentation(self.friendPic.image);
+        [friend setValue:imgData forKey:@"friendImg"];
+    }else{
+        UIImage *image = [UIImage imageNamed:@"one.jpg"];
+        NSData *imgData = UIImagePNGRepresentation(image);
+        [friend setValue:imgData forKey:@"friendImg"];
+    }
     NSError *error = nil;
     if (![context save:&error]) {
         [NSException raise:@"访问数据库错误" format:@"%@",[error localizedDescription]];

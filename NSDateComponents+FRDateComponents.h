@@ -10,4 +10,7 @@
 
 @interface NSDateComponents (FRDateComponents)
 + (BOOL) compare:(NSDateComponents *) oneComponents big:(NSDateComponents *) otherComponents;
++ (NSInteger) theDaysInMonth:(NSInteger) month;
++ (NSDateComponents *) getDateComponents:(NSDate *) date;
++ (NSInteger) theDayOfYear:(NSInteger) year;
 @end

@@ -83,8 +83,8 @@
         cell.picImageView.layer.borderColor = [UIColor grayColor].CGColor;
     }
     NSString *birthDay = friend.birthday;
-    NSDate *now = [NSDate date];
-    NSLog(@"%@",[self howlongFromDate:birthDay]);
+    NSString *howLongDay = [self howlongFromDate:birthDay];
+    cell.howLongWithNowTime.text = [NSString stringWithFormat:@"距离生日还有%@天",howLongDay ];
     return cell;
 }
 
@@ -111,7 +111,7 @@
     }
     
 }
-/**< 方法搁浅  先着手开发 iOS 方面的部分。 逻辑部分稍后完成 */
+/**< 计算现在时间距离生日时间还剩多少天 */
 - (NSString *) howlongFromDate:(NSString *)fromDate
 {
     //处理fromDate
@@ -127,48 +127,54 @@
     
     NSDate *localeDate = [dateFormatter dateFromString:[dateFormatter stringFromDate:date]];
     
-    NSDateComponents *fromDateCom = [self getDateComponents:fromDateObj];
+    NSDateComponents *fromDateCom = [NSDateComponents  getDateComponents:fromDateObj];
     
-    NSDateComponents *localDateCom = [self getDateComponents:localeDate];
+    NSDateComponents *localDateCom = [NSDateComponents getDateComponents:localeDate];
 
     //比较 NSDateComponents 的 月 和 日 大小。
     
     BOOL big = [NSDateComponents compare:fromDateCom big:localDateCom];
-    
+    NSInteger localMon = [localDateCom month];
+    NSInteger fromMon = [fromDateCom month];
+
     if (big) {
-       //local - from
-        NSInteger localMon = [localDateCom month];
-        NSInteger fromMon = [fromDateCom month];
         if (localMon == fromMon) {
-            
+            NSInteger fromDate = [fromDateCom day];
+            NSInteger localDate = [localDateCom day];
+            NSInteger minusDay = fromDate - localDate;
+            return [NSString stringWithFormat:@"%ld",minusDay];
         }else{
-            NSInteger grap = localMon - fromMon;
-            if (grap > 0) {
-                
-            }else{
-                
+            //loop the monthe between localMon and fromMon
+            NSInteger sumOfDaysInMinusMonth = 0;
+            for (NSInteger i = localMon+1 ; i < fromMon; i++) {
+                sumOfDaysInMinusMonth += [NSDateComponents theDaysInMonth:i];
             }
+            NSInteger localDayRemain = [NSDateComponents theDaysInMonth:localMon] - [localDateCom day];
+            NSInteger fromDayRemain = [fromDateCom day];
+            NSInteger result = sumOfDaysInMinusMonth + localDayRemain + fromDayRemain;
+            return [NSString stringWithFormat:@"%ld",result];
         }
     }else{
         //all days of year - (from - local)
+        // fromDate is less
+        NSInteger result = 0;
+        if (localMon == fromMon) {
+            result = [localDateCom day] - [fromDateCom day];
+        }else{
+            NSInteger sumOfDaysInMinusMonth = 0;
+            for (NSInteger i = fromMon + 1 ; i< localMon; i++) {
+                 sumOfDaysInMinusMonth += [NSDateComponents theDaysInMonth:i];
+            }
+            NSInteger fromDayRemain = [NSDateComponents theDaysInMonth:fromMon] - [fromDateCom day];
+            NSInteger localDayRemain = [localDateCom day];
+            NSInteger theDaysOfYear = [NSDateComponents theDayOfYear:[localDateCom year]];
+            result = theDaysOfYear - (sumOfDaysInMinusMonth + fromDayRemain + localDayRemain);
+        }
+        return [NSString stringWithFormat:@"%ld",result];
     }
-     return @"";
-    
 }
 
--(NSDateComponents *) getDateComponents:(NSDate *) date
-{
-    
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    
-    calendar.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:8];
-    
-    NSDateComponents *calComponts = [calendar components:unitFlags fromDate:date];
-    
-    return calComponts;
-}
+
 
 /*
 // Override to support conditional editing of the table view.
