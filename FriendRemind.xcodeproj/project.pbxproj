@@ -47,8 +47,8 @@
 		25303A7D1B5B3D210069B6BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		25303A7F1B5B44580069B6BE /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Friend.h; path = FriendRemind/Friend.h; sourceTree = "<group>"; };
 		25303A801B5B44580069B6BE /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Friend.m; path = FriendRemind/Friend.m; sourceTree = "<group>"; };
-		25303A821B5B4BD90069B6BE /* FriendStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendStore.h; sourceTree = "<group>"; };
-		25303A831B5B4BD90069B6BE /* FriendStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendStore.m; sourceTree = "<group>"; };
+		25303A821B5B4BD90069B6BE /* FriendStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendStore.h; path = FriendRemind/FriendStore.h; sourceTree = SOURCE_ROOT; };
+		25303A831B5B4BD90069B6BE /* FriendStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendStore.m; path = FriendRemind/FriendStore.m; sourceTree = SOURCE_ROOT; };
 		25303ABA1B5BB0990069B6BE /* FriendInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendInfoViewController.h; sourceTree = "<group>"; };
 		25303ABB1B5BB0990069B6BE /* FriendInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendInfoViewController.m; sourceTree = "<group>"; };
 		25303ABC1B5BB0990069B6BE /* FriendInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendInfoViewController.xib; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 		259B05F21B5E25FB007F39A7 /* FriendDetialInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendDetialInfoViewController.m; sourceTree = "<group>"; };
 		259B05F31B5E25FB007F39A7 /* FriendDetialInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendDetialInfoViewController.xib; sourceTree = "<group>"; };
 		259B05F61B5E99DD007F39A7 /* one.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = one.jpg; path = ../../../Downloads/one.jpg; sourceTree = "<group>"; };
-		25ADC9EF1B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+FRDateComponents.h"; sourceTree = "<group>"; };
-		25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+FRDateComponents.m"; sourceTree = "<group>"; };
+		25ADC9EF1B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDateComponents+FRDateComponents.h"; path = "FriendRemind/NSDateComponents+FRDateComponents.h"; sourceTree = SOURCE_ROOT; };
+		25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDateComponents+FRDateComponents.m"; path = "FriendRemind/NSDateComponents+FRDateComponents.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
