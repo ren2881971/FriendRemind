@@ -97,7 +97,7 @@
     [friend setValue:self.nameText.text forKey:@"name"];
     [friend setValue:self.birthDayText.text forKey:@"birthday"];
     if (self.friendPic.image != nil) {
-        NSData *imgData = UIImagePNGRepresentation(self.friendPic.image);
+        NSData *imgData = UIImageJPEGRepresentation(self.friendPic.image,0.5);
         [friend setValue:imgData forKey:@"friendImg"];
     }else{
         UIImage *image = [UIImage imageNamed:@"one.jpg"];
