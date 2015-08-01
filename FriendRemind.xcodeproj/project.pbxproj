@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250A52C41B6D45FE00E21AE5 /* BirthDayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 250A52C31B6D45FE00E21AE5 /* BirthDayUtil.m */; };
 		25303A741B5B38C30069B6BE /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25303A731B5B38C30069B6BE /* FriendCell.xib */; };
 		25303A771B5B38E10069B6BE /* FriendCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25303A761B5B38E10069B6BE /* FriendCellTableViewCell.m */; };
 		25303A7C1B5B3C2E0069B6BE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25303A7A1B5B3C2E0069B6BE /* Model.xcdatamodeld */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250A52C21B6D45FE00E21AE5 /* BirthDayUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BirthDayUtil.h; path = FriendRemind/BirthDayUtil.h; sourceTree = "<group>"; };
+		250A52C31B6D45FE00E21AE5 /* BirthDayUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BirthDayUtil.m; path = FriendRemind/BirthDayUtil.m; sourceTree = "<group>"; };
 		25303A731B5B38C30069B6BE /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		25303A751B5B38E10069B6BE /* FriendCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCellTableViewCell.h; sourceTree = "<group>"; };
 		25303A761B5B38E10069B6BE /* FriendCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCellTableViewCell.m; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 			children = (
 				25ADC9EF1B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.h */,
 				25ADC9F01B5D4E5100CBCD52 /* NSDateComponents+FRDateComponents.m */,
+				250A52C21B6D45FE00E21AE5 /* BirthDayUtil.h */,
+				250A52C31B6D45FE00E21AE5 /* BirthDayUtil.m */,
 			);
 			name = Util;
 			path = ..;
@@ -314,6 +319,7 @@
 				253D57D41B4D83180074F3EC /* main.m in Sources */,
 				25303A841B5B4BD90069B6BE /* FriendStore.m in Sources */,
 				25303A771B5B38E10069B6BE /* FriendCellTableViewCell.m in Sources */,
+				250A52C41B6D45FE00E21AE5 /* BirthDayUtil.m in Sources */,
 				25303A7C1B5B3C2E0069B6BE /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

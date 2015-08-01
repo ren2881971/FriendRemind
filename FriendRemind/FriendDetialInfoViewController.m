@@ -7,12 +7,13 @@
 //
 
 #import "FriendDetialInfoViewController.h"
-
+#import "BirthDayUtil.h"
 @interface FriendDetialInfoViewController ()
 
 @property(nonatomic,strong) UIImageView *imageView;
 @property(nonatomic,strong) UILabel *nameLabel;
 @property(nonatomic,strong) UILabel *birthdayLabel;
+@property(nonatomic,strong) UILabel *howLongLabel;
 @end
 
 @implementation FriendDetialInfoViewController
@@ -24,6 +25,7 @@
         _imageView = [[UIImageView alloc] init];
         _nameLabel = [[UILabel alloc] init];
         _birthdayLabel = [[UILabel alloc] init];
+        _howLongLabel = [[UILabel alloc] init];
     }
     return self;
 }
@@ -43,6 +45,9 @@
     [self.view addSubview:self.imageView];
     
     [self.view addSubview:self.nameLabel];
+    
+    [self.view addSubview:self.howLongLabel];
+    
     //create the birthDayLabelTitle
     UILabel *birthDayTitle = [[UILabel alloc] init];
     
@@ -117,6 +122,16 @@
     
     [birthView addConstraints:birthDayVConstraints2];
     
+    self.howLongLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSArray *howLongVConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[birthView]-[howLongLabel]" options:0 metrics:nil views:@{@"birthView":birthView,@"howLongLabel":self.howLongLabel}];
+    
+    NSLayoutConstraint *howLongHConstraints = [NSLayoutConstraint constraintWithItem:self.howLongLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+    
+    [self.view addConstraints:howLongVConstraints];
+    
+    [self.view addConstraint:howLongHConstraints];
+    
 }
 
 - (void)viewDidLoad {
@@ -132,6 +147,12 @@
     self.nameLabel.text = self.friend.name;
     
     self.birthdayLabel.text = self.friend.birthday;
+    
+    BirthDayUtil *util = [BirthDayUtil new];
+    
+    NSString *temp = [util howlongFromDate:self.friend.birthday];
+    
+    self.howLongLabel.text = [NSString stringWithFormat:@"距离生日还有：%@ 天",temp];
 }
 
 - (void)didReceiveMemoryWarning {
