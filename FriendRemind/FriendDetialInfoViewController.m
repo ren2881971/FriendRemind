@@ -35,13 +35,15 @@
     self.view = view;
     
     self.view.backgroundColor = [UIColor whiteColor];
+    //init the birthday Content view
+    UIView *birthView = [[UIView alloc] init];
+    
+    [self.view addSubview:birthView];
     
     [self.view addSubview:self.imageView];
     
     [self.view addSubview:self.nameLabel];
-    
-    UIView *birthView = [[UIView alloc] init];
-    
+    //create the birthDayLabelTitle
     UILabel *birthDayTitle = [[UILabel alloc] init];
     
     birthDayTitle.text = @"生日";
@@ -49,8 +51,6 @@
     [birthView addSubview:birthDayTitle];
     
     [birthView addSubview:self.birthdayLabel];
-    
-    [self.view addSubview:birthView];
     
     NSDictionary *dicView = @{@"imageView":self.imageView};
     
@@ -89,10 +89,8 @@
     
     [self.view addConstraint:nameLabelHConstraints];
     
-   
-    
-    birthDayTitle.translatesAutoresizingMaskIntoConstraints = NO;
-    
+    //This is birthView autolayout constraints
+
     birthView.translatesAutoresizingMaskIntoConstraints = NO;
     
     NSArray *birthViewVConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[nameLabel]-20-[birthView]" options:0 metrics:nil views:@{@"nameLabel":self.nameLabel,@"birthView":birthView}];
@@ -102,11 +100,11 @@
     [self.view addConstraints:birthViewVConstraints];
     
     [self.view addConstraint:birthViewHConstraints];
-    
+    //This is birthDayTitle and birthdayLabel autolayout constraints.
+    birthDayTitle.translatesAutoresizingMaskIntoConstraints = NO;
     
     self.birthdayLabel.translatesAutoresizingMaskIntoConstraints = NO;
 
-    
     NSArray *birthDayHConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[birthDayTitle]-10-[birthDay]-0-|" options:0 metrics:nil views:@{@"birthDayTitle":birthDayTitle,@"birthDay":self.birthdayLabel}];
     
     NSArray *birthDayVConstraints1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[birthDayTitle]-0-|" options:0 metrics:nil views:@{@"birthDayTitle":birthDayTitle}];
@@ -118,32 +116,6 @@
     [birthView addConstraints:birthDayVConstraints1];
     
     [birthView addConstraints:birthDayVConstraints2];
-    
-    //this is birthdayTitle constrains*/
-    /*
-    NSArray *birthDayVConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[nameLabel]-20-[birthDayTitle]" options:0 metrics:nil views:@{@"birthDayTitle":birthDayTitle,@"nameLabel":self.nameLabel}];
-    
-    NSArray *birthDayHConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[birDayTitle]-10-[birthdayLabel]" options:(0) metrics:nil views:@{@"birDayTitle":birthDayTitle,@"birthdayLabel":self.birthdayLabel}];
-    
-    
-    [self.view addConstraints:birthDayVConstraints];
-    
-    [self.view addConstraints:birthDayHConstraints];
-    */
-    /*This is birthdayLabel autolayout constrains*/
-    /*
-    NSArray *birthdayLabelVConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[nameLabel]-20-[birthdayLabel]" options:0 metrics:nil views:@{@"nameLabel":self.nameLabel,@"birthdayLabel":self.birthdayLabel}];
-    
-    NSLayoutConstraint *birthdayLabelHConstraints = [NSLayoutConstraint constraintWithItem:self.birthdayLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
-    
-    self.birthdayLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.view addConstraint:birthdayLabelHConstraints];
-    
-    [self.view addConstraints:birthdayLabelVConstraints];*/
-    
-  
-    
     
 }
 
