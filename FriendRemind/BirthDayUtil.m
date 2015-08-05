@@ -40,7 +40,7 @@
             NSInteger fromDate = [fromDateCom day];
             NSInteger localDate = [localDateCom day];
             NSInteger minusDay = fromDate - localDate;
-            return [NSString stringWithFormat:@"%ld",minusDay];
+            return [NSString stringWithFormat:@"%ld",(long)minusDay];
         }else{
             //loop the monthe between localMon and fromMon
             NSInteger sumOfDaysInMinusMonth = 0;
@@ -50,7 +50,7 @@
             NSInteger localDayRemain = [NSDateComponents theDaysInMonth:localMon] - [localDateCom day];
             NSInteger fromDayRemain = [fromDateCom day];
             NSInteger result = sumOfDaysInMinusMonth + localDayRemain + fromDayRemain;
-            return [NSString stringWithFormat:@"%ld",result];
+            return [NSString stringWithFormat:@"%ld",(long)result];
         }
     }else{
         //all days of year - (from - local)
@@ -68,7 +68,7 @@
             NSInteger theDaysOfYear = [NSDateComponents theDayOfYear:[localDateCom year]];
             result = theDaysOfYear - (sumOfDaysInMinusMonth + fromDayRemain + localDayRemain);
         }
-        return [NSString stringWithFormat:@"%ld",result];
+        return [NSString stringWithFormat:@"%ld",(long)result];
     }
 }
 @end

@@ -15,7 +15,7 @@
 #import "FriendDetialInfoViewController.h"
 #import "BirthDayUtil.h"
 @import CoreData;
-@interface FriendListTableViewController ()
+@interface FriendListTableViewController ()<UITableViewDelegate>
 @property(nonatomic,strong) NSMutableArray *friendList;
 @property(nonatomic,weak) NSManagedObjectContext *context;/**< 上下文*/
 @end
@@ -87,6 +87,22 @@
     NSString *howLongDay = [self howlongFromDate:birthDay];
     cell.howLongWithNowTime.text = [NSString stringWithFormat:@"距离生日还有%@天",howLongDay ];
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static FriendCellTableViewCell *cell = nil;
+    if (!nil) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"FirendCell"];
+    }
+    [cell layoutIfNeeded];
+    [cell updateConstraintsIfNeeded];
+    
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    height = height + 1;
+    NSLog(@"**************the cell height is %f",height);
+    return height;
+    
 }
 
 #pragma mark - operation method

@@ -60,9 +60,9 @@
     NSDictionary *dicView = @{@"imageView":self.imageView};
     
     /*This is imageView constraints.*/
-    NSArray *widthConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[imageView(100)]" options:0 metrics:nil views:dicView];
+    NSArray *widthConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[imageView(150)]" options:0 metrics:nil views:dicView];
     
-    NSArray *heightConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[imageView(100)]" options:0 metrics:nil views:dicView];
+    NSArray *heightConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[imageView(150)]" options:0 metrics:nil views:dicView];
     
     self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -140,7 +140,7 @@
     self.navigationItem.title = @"详细信息";
     self.imageView.image = [[UIImage alloc] initWithData:self.friend.friendImg];
     self.imageView.layer.masksToBounds = YES;
-    self.imageView.layer.cornerRadius = self.imageView.bounds.size.width * 0.5;
+    self.imageView.layer.cornerRadius = self.imageView.bounds.size.width * 0.1;
     self.imageView.layer.borderWidth = 0.5;
     self.imageView.layer.borderColor = [UIColor grayColor].CGColor;
     
