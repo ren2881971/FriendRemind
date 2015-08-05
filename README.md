@@ -9,9 +9,8 @@
 FriendRemind v1.0
 
 待完成：
-- 点击显示调整 显示详细信息
-- TableCell  布局调整（调高，生日字体调小，突出头像）
-- 修改功能
+- UITableCell autolayout自适应
+- image 优化，从图像压缩质量到后台内存处理
 - 增加分类
 - 移动位置 增加order 字段
 - 推送功能
@@ -23,6 +22,8 @@ FriendRemind v1.0
 - 新增功能可以保存图像
 - 列表展示功能可以保存图像
 - 生日倒计时功能
+- 显示功能
+- TableCell 布局调整
 
 PS：
 ## 每天被各种问题折磨，痛并快乐着！ (http://stackoverflow.com/) 每天访问次数最多的网站！ 
