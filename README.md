@@ -9,7 +9,7 @@
 FriendRemind v1.0
 
 待完成：
-- UITableCell autolayout自适应
+
 - image 优化，从图像压缩质量到后台内存处理
 - 增加分类
 - 移动位置 增加order 字段
@@ -24,7 +24,7 @@ FriendRemind v1.0
 - 生日倒计时功能
 - 显示功能
 - TableCell 布局调整
-
+- UITableViewCell autolayout 优化
 PS：
 ## 每天被各种问题折磨，痛并快乐着！ (http://stackoverflow.com/) 每天访问次数最多的网站！ 
 License：LGPL 
