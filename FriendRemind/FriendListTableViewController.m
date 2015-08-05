@@ -100,7 +100,6 @@
     
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     height = height + 1;
-    NSLog(@"**************the cell height is %f",height);
     return height;
     
 }
