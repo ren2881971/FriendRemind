@@ -60,6 +60,7 @@
         [self.tableView reloadData];
     });
 }
+
 #pragma mark - Table view data source
 
 
@@ -76,12 +77,17 @@
     cell.nameLabel.text = friend.name;
     cell.birthdayLabel.text = friend.birthday;
     if (friend.friendImg != nil) {
+        /*
+        CGSize asize = CGSizeMake(58, 58);
+        UIImage *shortImg = [self thumbnailWithImage:[UIImage imageWithData:friend.friendImg] size:asize];
+        */
         UIImage *shortImg = [UIImage imageWithData:friend.friendImg];
         cell.picImageView.image = shortImg;
         cell.picImageView.layer.masksToBounds = YES;
         cell.picImageView.layer.cornerRadius = cell.picImageView.bounds.size.width * 0.3;
         cell.picImageView.layer.borderWidth = 0.1;
         cell.picImageView.layer.borderColor = [UIColor grayColor].CGColor;
+        
     }
     NSString *birthDay = friend.birthday;
     NSString *howLongDay = [self howlongFromDate:birthDay];
@@ -205,6 +211,20 @@
     [self.navigationController pushViewController:detialInfoViewController animated:YES];
 }
 
+#pragma mark --image handle
+-(UIImage *) thumbnailWithImage:(UIImage *) image size:(CGSize) asize
+{
+    UIImage *newImage ;
+    if (nil == image) {
+        newImage = nil;
+    }else{
+        UIGraphicsBeginImageContext(asize);
+        [image drawInRect:CGRectMake(0, 0, asize.width, asize.height)];
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    return newImage;
+}
 
 /*
 #pragma mark - Navigation

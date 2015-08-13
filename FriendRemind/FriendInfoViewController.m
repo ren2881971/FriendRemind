@@ -54,6 +54,7 @@
     
     //image view handle.
     if (!self.friendPic.image) {
+    
         UIImage *image = [UIImage imageNamed:@"one.jpg"];
         self.friendPic.image = image;
         self.friendPic.layer.masksToBounds = YES;
@@ -186,7 +187,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *portraitImg = info[@"UIImagePickerControllerOriginalImage"];
-    
+        
     self.friendPic.image = portraitImg;
     
     [self dismissViewControllerAnimated:YES completion:nil];
